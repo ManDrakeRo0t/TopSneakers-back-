@@ -7,6 +7,7 @@ import ru.bogatov.VueApp.Entities.Message;
 import ru.bogatov.VueApp.Exeptions.NotFoundExeption;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MessageService {
@@ -40,7 +41,7 @@ public class MessageService {
     }
 
     public List<Message> getAllMessages(){
-        return messagesRepo.findAll();
+        return messagesRepo.findAll().stream().sorted().collect(Collectors.toList());
     }
 
 
