@@ -2,15 +2,13 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
-    <body>Messeges List
+    <body>
 
     <div id="app">
-        {{ message }}
+        <message-list></message-list>
     </div>
 
-        <script src="/static/main.js"></script>
+        <script src="/static/bundle.js"></script>
     </body>
 </html>

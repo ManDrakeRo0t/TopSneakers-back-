@@ -1,0 +1,32 @@
+{
+  "name": "top-sneakers",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.6.12",
+    "axios": "latest"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ManDrakeRo0t/TopSneakers-back-.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "ManDrake",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ManDrakeRo0t/TopSneakers-back-/issues"
+  },
+  "homepage": "https://github.com/ManDrakeRo0t/TopSneakers-back-#readme"
+}
