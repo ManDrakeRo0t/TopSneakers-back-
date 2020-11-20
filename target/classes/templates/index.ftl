@@ -2,13 +2,13 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
+        <title>home</title>
     </head>
     <body>
 
     <div id="app">
-        <message-list></message-list>
-    </div>
 
-        <script src="/static/bundle.js"></script>
+    </div>
+        <script src="http://localhost:8001/main.js"></script>
     </body>
 </html>

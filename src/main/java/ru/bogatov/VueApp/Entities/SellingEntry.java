@@ -12,7 +12,7 @@ public class SellingEntry {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Integer count;
-    private Integer price;
+    private Float price;
     private Integer sale;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "product_id")

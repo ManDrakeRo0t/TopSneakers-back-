@@ -4,14 +4,23 @@
   "description": "webpack",
   "main": "index.js",
   "dependencies": {
+    "axios": "latest",
     "vue": "^2.6.12",
-    "axios": "latest"
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
+    "start": "webpack-dev-server",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"

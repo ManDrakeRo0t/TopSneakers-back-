@@ -5,6 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -19,8 +20,10 @@ public class User {
     private String mail;
     private String password;
     private Boolean active;
-    @Enumerated(value = EnumType.STRING)
-    private Roles role;
+    @ElementCollection(targetClass = Role.class,fetch = FetchType.EAGER)
+    @CollectionTable(name = "user_role" , joinColumns = @JoinColumn(name = "user_id"))
+    @Enumerated(EnumType.STRING)
+    private Set<Role> roles;
     @OneToMany( fetch = FetchType.EAGER)
     private List<News> newsList;
     @OneToMany( fetch = FetchType.EAGER)

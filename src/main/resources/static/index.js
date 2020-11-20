@@ -1,20 +1,17 @@
 import Vue from 'vue'
 import Axios from 'axios'
-import messageList from './VueComponents/MessageList'
+import App from './VueComponents/App.vue'
+import MessageList from "MessageList.vue";
+
 
 Vue.prototype.$http = Axios;
 
-var app = new Vue({
-    el: '#app',
-    data: function(){
-        return {
 
-        }
-    },
-    components : {
-        'message-list' : messageList
-    },
-    mounted : function(){
-        // Axios.get("http://localhost:8082/user").then(r => this.message = r.data)
-    }
-});
+new Vue({
+    render : h => h(App)
+}).$mount('#app')
+
+new Vue({
+    render : h => h(MessageList)
+}).$mount('#a')
+
