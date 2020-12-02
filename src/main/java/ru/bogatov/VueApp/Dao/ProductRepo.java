@@ -5,4 +5,7 @@ import org.springframework.stereotype.Repository;
 import ru.bogatov.VueApp.Entities.Product;
 @Repository
 public interface ProductRepo extends JpaRepository<Product,Integer> {
+
+
+    public Product getProductById(Integer id);
 }

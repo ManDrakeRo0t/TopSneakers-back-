@@ -1,18 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>a</title>
-</head>
-<body>
+<#import "parts/common.ftl" as c >
 
-<div id="a">
+<@c.html>
 
-</div>
+    <div id="auth">
 
-<div id="app">
+    </div>
 
-</div>
-<script src="http://localhost:8001/main.js"></script>
-</body>
-</html>
+    <div id="a">
+
+    </div>
+
+    <div id="app">
+
+    </div>
+
+</@c.html>
+

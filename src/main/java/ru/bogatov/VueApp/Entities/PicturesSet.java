@@ -14,7 +14,7 @@ public class PicturesSet {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @OneToMany( fetch = FetchType.EAGER)
-    private List<PicturesEntry> pictures;
+    public List<PicturesEntry> pictures;
     @OneToMany( fetch = FetchType.EAGER)
     private List<News> newsRoot;
     @OneToMany( fetch = FetchType.EAGER)

@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 import ru.bogatov.VueApp.Entities.Attribute;
 @Repository
 public interface AttributeRepo extends JpaRepository<Attribute,Integer> {
+    public Attribute findAttributeByName(String name);
 }

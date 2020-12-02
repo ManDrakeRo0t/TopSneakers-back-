@@ -14,7 +14,6 @@
 <script>
     import Message from "./Message.vue";
 
-
     export default {
         name: "MessageList",
         components: {Message},
@@ -33,8 +32,10 @@
                 }).then(() => this.loadMessages())
 
             },
-            loadMessages(){
-                this.$http.get("http://localhost:8082/message").then(r => this.messages = r.data)
+            loadMessages(){ //todo filter)
+                this.$http.get("http://localhost:8082/message").then(r => {
+                    if(true) {this.messages = r.data}
+                });
                 this.text = ''
             }
         }

@@ -18,7 +18,6 @@ public class AttributesValues {
     @JoinColumn(name = "product_id")
     private Product product;
     private String stringValue;
-    private Integer integerValue;
 
     public AttributesValues() {
     }

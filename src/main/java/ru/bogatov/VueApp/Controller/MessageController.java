@@ -23,7 +23,6 @@ public class MessageController {
 
         return messageService.getOneMessage(id);
     }
-
     @GetMapping("")
     public List<Message> getMessages() {
         return messageService.getAllMessages();

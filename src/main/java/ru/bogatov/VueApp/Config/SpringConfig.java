@@ -1,18 +1,15 @@
 package ru.bogatov.VueApp.Config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class SpringConfig {
-    @Bean
-    public Gson getGsonBuilder(){
-        return new GsonBuilder().setPrettyPrinting().create();
-    }
 
     @Bean
     public WebMvcConfigurer corsConfigurer(){
@@ -23,4 +20,10 @@ public class SpringConfig {
             }
         };
     }
+
+    @Bean
+    public PasswordEncoder getPasswordEncode(){
+        return new BCryptPasswordEncoder(6);
+    }
+
 }
