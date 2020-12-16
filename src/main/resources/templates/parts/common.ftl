@@ -175,9 +175,11 @@
                     <p>
                         <a href="#!">---</a>
                     </p>
-                    <p>
-                        <a href="/administration/stat">Статистика</a>
-                    </p>
+                    <#if isAdmin>
+                        <p>
+                            <a href="/administration/stat">Статистика</a>
+                        </p>
+                    </#if>
                     <#if isAdmin>
                         <p>
                             <a href="/administration">Управление</a>

@@ -38,6 +38,7 @@ public class StaticService {
         labels.forEach(x -> {datasets.data.add(0);});
         for(Selling selling : sellingList){
             Date date = selling.getPayDate();
+            if(date == null) continue;
             String dateS = transform(date);
             int index = labels.indexOf(dateS);
             if(index != -1){

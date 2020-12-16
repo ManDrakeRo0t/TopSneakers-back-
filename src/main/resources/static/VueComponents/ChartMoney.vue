@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h4 class="text-center">Статистика дохода</h4>
         От <input type="date" v-model="from">
         До <input type="date" v-model="to">
         <button @click="update">Получить</button>
@@ -27,7 +28,7 @@
                         labels: this.data.labels,
                         datasets: [{
                             label: 'Выручка',
-                            backgroundColor: '#f87979',
+                            backgroundColor: '#e839f8',
                             pointBackgroundColor: 'white',
                             borderWidth: 1,
                             pointBorderColor: '#249EBF',
