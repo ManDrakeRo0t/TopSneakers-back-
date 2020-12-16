@@ -1,0 +1,44 @@
+/*body{*/
+/*    background-color:  !important;*/
+/*}*/
+
+
+.navbar{
+    background: #080718 !important;
+}
+
+.page-footer{
+    background-color: #080718;
+}
+
+.my-content{
+    margin-top:150px;
+}
+
+.my-card{
+    background-color: white !important;
+}
+
+.text-light{
+    color: white;
+}
+
+.image-v{
+    width : 120px;
+}
+
+.horizontal-scrollable > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.horizontal-scrollable > .row > .col-xs-4 {
+    display: inline-block;
+    float: none;
+}
+
+.basketStyle{
+    margin-top:100px;
+    background-color:#080718 ;
+    color: white;
+}

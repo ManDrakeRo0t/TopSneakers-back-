@@ -6,7 +6,7 @@
         <label>
             <input type="text" v-model="name">
         </label>
-        <button type="button" @click="addBrand">Добавить бренд</button>
+        <button type="button" class="btn btn-primary" @click="addBrand">Добавить бренд</button>
     </div>
 </template>
 

@@ -13,7 +13,6 @@ public class City {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
-    private Integer deliverTime;
     @OneToMany( fetch = FetchType.EAGER)
     private Set<DeliverPunct> deliverPuncts;
 

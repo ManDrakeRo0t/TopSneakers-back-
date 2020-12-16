@@ -14,9 +14,6 @@ public class DeliverPunct {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "schedule_id")
-    private Schedule schedule;
-    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "city_id")
     private City city;
     private float longitude;
@@ -24,6 +21,16 @@ public class DeliverPunct {
     private String address;
     @OneToMany( fetch = FetchType.EAGER)
     private List<Selling> sellingList;
+    @Transient
+    float[] coords = new float[2];
+
+    public void perform(){
+        coords[1] = longitude;
+        coords[0] = latitude;
+    }
+
+    @Transient
+    private String cityName;
 
     public DeliverPunct() {
     }

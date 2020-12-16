@@ -3,7 +3,7 @@
         <h1 class="font-red" >{{productType}}</h1>
         <h3>{{brandName.name}} : {{name}}</h3>
         <div v-for="img in pictures.pictures">
-            <img class="image" v-bind:src=img.source>
+            <img class="image" style="width: 50px" v-bind:src=img.source>
         </div>
         price - {{price}}
         count = {{count}}
@@ -35,9 +35,6 @@
 </script>
 
 <style scoped >
-    .image{
-        width : 100px;
-    }
     .font-red{
         color: blueviolet;
     }

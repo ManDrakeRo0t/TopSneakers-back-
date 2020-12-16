@@ -1,6 +1,8 @@
 package ru.bogatov.VueApp.Entities;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,10 +10,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "usr")
 public class User implements UserDetails {
     @Id
@@ -21,6 +25,8 @@ public class User implements UserDetails {
     private String lastName;
     private String number;
     private String username;
+    @Transient
+    private String pass2;
     private String password;
     private boolean active;
     @ElementCollection(targetClass = Role.class,fetch = FetchType.EAGER)
@@ -31,14 +37,30 @@ public class User implements UserDetails {
     private List<News> newsList;
     @OneToMany( fetch = FetchType.EAGER)
     private List<Post> postList;
-    @OneToMany( fetch = FetchType.EAGER)
-    private List<Busket> busketList;
+    @OneToOne( fetch = FetchType.EAGER)
+    private Busket busketList;
     @OneToMany( fetch = FetchType.EAGER)
     private List<Selling> sellingList;
 
 
     public User(){}
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+        User user = (User) o;
+        return id.equals(user.id) &&
+                Objects.equals(firstName, user.firstName) &&
+                Objects.equals(lastName, user.lastName) &&
+                Objects.equals(number, user.number) &&
+                username.equals(user.username);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, firstName, lastName, number, username);
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

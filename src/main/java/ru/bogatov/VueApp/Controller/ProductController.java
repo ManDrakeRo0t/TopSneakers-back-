@@ -58,6 +58,7 @@ public class ProductController {
             model.addAttribute("msg","такого продукта не существует");
         }else{
             model.addAttribute("product",product);
+            model.addAttribute("addProduct",productService.getRecommendedProducts(product));
         }
         return "parts/product";
     }

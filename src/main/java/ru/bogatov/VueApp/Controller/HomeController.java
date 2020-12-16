@@ -13,9 +13,4 @@ public class HomeController {
 
         return "index";
     }
-    @GetMapping("a")
-    public String aPage(Model model){
-
-        return "a";
-    }
 }

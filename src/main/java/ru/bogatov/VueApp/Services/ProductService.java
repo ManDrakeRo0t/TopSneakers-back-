@@ -28,9 +28,15 @@ public class ProductService {
         return productRepo.findAll();
     }
 
+    public List<Product> getRecommendedProducts(Product product){
+
+        return getWithParam(product.getBrandName().getName(),product.getProductType().name(),"",product.getPrice().toString(),"null","null");
+    }
+
     public void addProduct(MultipartFile[] file,Product product){
         product.setBrandName(brandNameRepo.getBrandNameByName(product.getBrand()));
         product.setCreationDate(Calendar.getInstance());
+        if(product.getSale() == null) product.setSale(0);
         try{
             product.setPictures(pictureService.saveFiles(file));
         }catch (Exception e){

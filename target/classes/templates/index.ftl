@@ -1,14 +1,22 @@
-<!DOCTYPE HTML>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>home</title>
-    </head>
-    <body>
+<#import "parts/common.ftl" as c >
 
-    <div id="app">
+<@c.html>
 
+    <@c.header></@c.header>
+
+    <div class="my-content">
+         <div class="container">
+             <h3>Главная страница</h3>
+             <h3>возможно</h3>
+             <h3>будет</h3>
+             <h3>красивше</h3><br><br>
+         </div>
     </div>
-        <script src="http://localhost:8001/main.js"></script>
-    </body>
-</html>
+
+    <@c.footer></@c.footer>
+
+</@c.html>
+
+
+
+

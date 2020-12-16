@@ -25,6 +25,10 @@ public class AuthController {
 
     @PostMapping("registration")
     public String postRegistration(User user, Model model){
+        if(!user.getPassword().equals(user.getPass2())){
+            model.addAttribute("msg","Вы ввели не одинаковые пароли");
+            return "auth/registration";
+        }
         if(userService.addUser(user)){
             User newUser = userService.getUserByUserName(user.getUsername());
             UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(newUser,null,newUser.getAuthorities());
